@@ -18,8 +18,6 @@ const ArticleFeed = () => {
     })
   }, []);
 
-  console.log(articles)
-
   return (
     <ul>
       {articles.map((article, index) => {
