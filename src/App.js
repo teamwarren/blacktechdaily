@@ -5,10 +5,10 @@ import ArticlesFeed from './components/articles-feed/articles-feed'
 
 const App = () => {
   return (
-    <div>
-      <h1> Black Tech Daily </h1>
-      <h2> Your Daily Source for News on Blacks in IT </h2>
-      <ArticlesFeed />
+    <div className="container">
+      <h1 className="title"> Black Tech Daily </h1>
+      <h2 className="subtitle"> Your Daily Source for News on Blacks in IT </h2>
+      <ArticlesFeed/>
     </div>
   );
 }

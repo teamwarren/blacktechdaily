@@ -1,0 +1,8 @@
+li {
+    list-style-type: none;
+    margin: 1em 0;
+}
+
+a:link {
+    text-decoration: none;
+}
