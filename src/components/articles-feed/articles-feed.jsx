@@ -12,12 +12,23 @@ const url =
 
 const ArticleFeed = props => {
   const [articles, setArticles] = useState([]);
+  const [redditFeed, setRedditFeed] = useState([]);
 
   useEffect(() => {
     axios.get(url).then(res => {
       setArticles(res.data.articles)
+    })``
+  }, []);
+
+  useEffect(() => {
+    axios.get('https://www.reddit.com/r/ObsidianTech.json').then(res => {
+      setRedditFeed(res.data.data.children)
     })
   }, []);
+
+  const list = [...articles, ...redditFeed]
+  console.log(list);
+
 
   return (
     <ul>
