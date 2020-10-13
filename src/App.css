@@ -1,16 +1,23 @@
 
-  /* .dark-container {
- } */
+  .container {
+    background: lightgrey;
+  }
+  
+  .dark-container {
+    background: #030303;
+ }
 
  .content {
      width: 50%;
      margin: 0 auto;
      height: 100%;
      padding: 5%;
-     background-color: lightgrey;
+     background-color: white;
      border-radius: 10px
  }
  
- /* .dark-content {
- } */
+ .dark-content {
+   color: #999B9D;
+   background-color: #1A1A1B;
+ }
 
