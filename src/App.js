@@ -22,7 +22,7 @@ const App = () => {
         <h2 className="subheader"> Your Daily Source for News on Blacks in IT </h2>
         <ArticlesFeed mode={mode}/>
       </div>
-      <Footer />
+      <Footer mode={mode}/>
     </div>
   );
 }
