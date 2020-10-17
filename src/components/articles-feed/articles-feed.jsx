@@ -1,42 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { apiKey } from '../../env';
+import moment from 'moment';
+import { blackTechArticles } from './articles.config';
 import './articles-feed.css';
-
-const url =
-  'http://newsapi.org/v2/everything?' +
-  'q="black tech" OR "black engineer" OR "black stem" OR "african american ceo" OR "black tech twitter" OR "black engineering" OR "black-owned business"&' +
-  'from=2020-10-01&' +
-  'sortBy=popularity&' +
-  apiKey;
 
 const ArticleFeed = props => {
   const [articles, setArticles] = useState([]);
-  const [redditFeed, setRedditFeed] = useState([]);
 
   useEffect(() => {
-    axios.get(url).then(res => {
+    axios.get(blackTechArticles).then(res => {
       setArticles(res.data.articles)
-    })``
-  }, []);
-
-  useEffect(() => {
-    axios.get('https://www.reddit.com/r/ObsidianTech.json').then(res => {
-      setRedditFeed(res.data.data.children)
     })
   }, []);
 
-  const list = [...articles, ...redditFeed]
-  console.log(list);
-
-
-  return (
+  return articles.length > 0 ? (
     <ul>
-      {articles.map((article, index) => {
-        return <li className="article-li" key={index}><a className={`anchor-${props.mode}`} href={article.url} target="_blank" rel="noopener noreferrer">{article.title}</a></li>
-      })}
+      {articles
+        .map((article, index) => {
+          return (
+            <li className="article-li" key={index}>
+              <span className={`article-header-${props.mode}`}>
+                Pushlished {article.author ? `by ${article.author}` : null} {moment(article.publishedAt).fromNow()}
+              </span>
+              <br />
+              <a className={`article-title-${props.mode}`} href={article.url} target="_blank" rel="noopener noreferrer">
+                {article.title}
+              </a>
+            </li>
+          )
+        })}
     </ul>
-  )
+  ) : 'Loading...'
 }
 
 export default ArticleFeed;
