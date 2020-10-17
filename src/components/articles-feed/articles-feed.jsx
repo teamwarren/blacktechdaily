@@ -20,7 +20,7 @@ const ArticleFeed = props => {
           return (
             <li className="article-li" key={index}>
               <span className={`article-header-${props.mode}`}>
-                Pushlished {article.author ? `by ${article.author}` : null} {moment(article.publishedAt).fromNow()}
+                Published {article.author ? `by ${article.author}` : null} {moment(article.publishedAt).fromNow()}
               </span>
               <br />
               <a className={`article-title-${props.mode}`} href={article.url} target="_blank" rel="noopener noreferrer">
