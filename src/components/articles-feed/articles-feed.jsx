@@ -1,30 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import moment from 'moment';
+import { articlesQuery } from './articles.config';
+import './articles-feed.css';
 
-const url =
-  'http://newsapi.org/v2/everything?' +
-  'q="black engineer"&' +
-  'from=2020-09-11&' +
-  'sortBy=popularity&' +
-  'apiKey=b5ba104a8a6740fd90b8c8a32126245a';
-
-const ArticleFeed = () => {
+const ArticleFeed = props => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    axios.get(url).then(res => {
-      // console.log(res.data)
+    axios.get(articlesQuery).then(res => {
       setArticles(res.data.articles)
     })
   }, []);
 
-  return (
-    <ul>
-      {articles.map((article, index) => {
-        return <li key={index}><a href={article.url} target="_blank" rel="noopener noreferrer">{article.title})</a></li>
-      })}
-    </ul>
-  )
+  const uniqueArticles = Array.from(new Set(articles.map(article => article.title)))
+    .map(title => {
+      return articles.find(article => article.title === title)
+    })
+
+  return articles.length > 0 ? (
+    uniqueArticles
+      .map((article, index) => {
+        return (
+          <p className="article" key={index}>
+            <span className={`article-header-${props.mode}`}>
+              Published {article.source.name ? `by ${article.source.name}` : null} {moment(article.publishedAt).fromNow()}
+            </span>
+            <br />
+            <a className={`article-title-${props.mode}`} href={article.url} target="_blank" rel="noopener noreferrer">
+              {article.title}
+            </a>
+          </p>
+        )
+      })
+  ) : 'Loading...'
 }
 
 export default ArticleFeed;

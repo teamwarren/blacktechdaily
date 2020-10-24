@@ -1,0 +1,27 @@
+.article {
+    list-style-type: none;
+    margin: 1em 0;
+}
+
+a:visited{
+    color: #6d6d73;
+}
+
+.article-header-light {
+    color: black;
+    font-size: 12px;
+}
+.article-header-dark {
+    color: #999B9D;
+    font-size: 12px;
+}
+
+.article-title-light {
+    color: black;
+    text-decoration: none;
+}
+
+.article-title-dark {
+    color: white;
+    text-decoration: none;
+}
