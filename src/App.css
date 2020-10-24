@@ -21,8 +21,9 @@
  }
 
  .header-top-row {
-   /* use flexbox to put Black Tech Daily title on left and dark mode button on right */
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
  }
 @media only screen and (max-width: 768px) {
   .content {
