@@ -1,20 +1,18 @@
+.footer {
+    bottom:5;
+    font-size: 1.5em;
+    padding: 1em 0;
+    position:relative;
+    width: 100vw;
+}
+
 .footer-light {
     background-color:white;
-    position:relative;
-    bottom:5;
-    width: 100%;
     /* border-top:5px solid black; */
-    padding: 1em 0;
-    font-size: 1.5em;
 }
 
 .footer-dark {
     background-color: #030303;
     color: #999B9D;
-    position:relative;
-    bottom:5;
-    width: 100%;
     /* border-top:5px solid #999B9D; */
-    padding: 1em 0;
-    font-size: 1.5em;
 }
