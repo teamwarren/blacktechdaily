@@ -1,4 +1,3 @@
-import { apiKey } from '../../env';
 import moment from 'moment';
 
 const daysAgo = `from=${moment().subtract(29, 'days').calendar()}&`
@@ -9,4 +8,4 @@ export const blackTechArticles =
   daysAgo +
   'sortBy=publishedAt&' +
   'language=en&' +
-  apiKey;
+  'apiKey=b5ba104a8a6740fd90b8c8a32126245a';
