@@ -1,0 +1,10 @@
+.button {
+    /* Edit color, border-radius, height, width, etc. 
+    to make a pretty button */
+    color: rgb(240, 227, 227);
+    border-radius: 50px;
+    height: 100%;
+    width: 15%;
+    min-width: 100px;
+    background-color: #144455;
+}
