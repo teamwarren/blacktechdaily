@@ -1,14 +1,13 @@
-
-  .container {
+.container {
     background: lightgrey;
-  }
+}
   
-  .dark-container {
+.dark-container {
     background: #030303;
  }
 
  .content {
-     width: 50%;
+     width: 50vw;
      margin: 0 auto;
      height: 100%;
      padding: 5%;
@@ -25,3 +24,8 @@
    /* use flexbox to put Black Tech Daily title on left and dark mode button on right */
 
  }
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 80vw;
+  }
+}
