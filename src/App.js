@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Footer from './components/footer/footer';
+import Button from './components/button/button';
 import './App.css';
 
 import ArticlesFeed from './components/articles-feed/articles-feed'
@@ -17,9 +18,11 @@ const App = () => {
   return (
     <div className={`container ${mode}-container`}>
       <div className={`content ${mode}-content`}>
-        <h1 className="header"> Black Tech Daily </h1>
-        <button onClick={toggleMode}>{modeText} mode</button>
-        <h2 className="subheader"> Your Daily Source for News on Blacks in IT </h2>
+        <div className="header-top-row">
+          <h1 className="header-title"> Black Tech Daily </h1>
+          <Button toggleMode={toggleMode} modeText={modeText} />
+        </div>
+          <h2 className="header-subtitle"> Your Daily Source for News on Blacks in Tech and Business </h2>
         <ArticlesFeed mode={mode}/>
       </div>
       <Footer mode={mode}/>
