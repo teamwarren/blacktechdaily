@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import moment from 'moment';
-import { blackTechArticles } from './articles.config';
+import { articlesQuery } from './articles.config';
 import './articles-feed.css';
 
 const ArticleFeed = props => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    axios.get(blackTechArticles).then(res => {
+    axios.get(articlesQuery).then(res => {
       setArticles(res.data.articles)
     })
   }, []);
@@ -24,7 +24,7 @@ const ArticleFeed = props => {
         return (
           <p className="article" key={index}>
             <span className={`article-header-${props.mode}`}>
-              Published {article.author ? `by ${article.author}` : null} {moment(article.publishedAt).fromNow()}
+              Published {article.source.name ? `by ${article.source.name}` : null} {moment(article.publishedAt).fromNow()}
             </span>
             <br />
             <a className={`article-title-${props.mode}`} href={article.url} target="_blank" rel="noopener noreferrer">

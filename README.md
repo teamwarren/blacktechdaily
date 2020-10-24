@@ -12,13 +12,6 @@ $ git clone https://github.com/teamwarren/blacktechdaily.git
 $ yarn or npm install
 
 $ yarn start or npm start
-
-To see the newsFeed, you'll need to create a (NewsAPI api key)[https://newsapi.org/account]. Once you have your
-api key, do the following:
-1. Create a env.js file in the root of this project.
-2. Create and export a constant of your api key i.e. `export const apiKey = 'apiKey=1234567890123456789012345678901a';` 
-
-env.js is included in the gitignore files, so this prevents you from pushing your api key.
 </code>
 
 

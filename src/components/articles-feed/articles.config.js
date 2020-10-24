@@ -1,11 +1,9 @@
-import moment from 'moment';
+const param = {
+  country: 'country=us',
+  lang: 'lang=en',
+  query: `https://gnews.io/api/v4/search?q="black engineer" OR "black developer" OR "black ceo" OR "black-owned" OR "black engineer" OR "spend black" OR "shop black" OR "black start-up" OR "black entrepreneur" OR "black excellence"&token=593f009a6b270061a6eab180bb3e5f3a&lang=en`, // 200 char limit
+  sorted: 'sortBy=publishedAt',
+  token: 'token=593f009a6b270061a6eab180bb3e5f3a',
+}
 
-const daysAgo = `from=${moment().subtract(29, 'days').calendar()}&`
-
-export const blackTechArticles =
-  'https://newsapi.org/v2/everything?' +
-  'qinTitle="black tech" OR "blacktech" OR "blacktechtwitter" OR "black tech twitter" OR "blacks in tech" OR "black engineers" OR "black devs" OR "black developers" OR "black stem" OR "black ceo" OR "black cto" OR "african american ceo" OR "black-owned" OR "black engineering" OR "spend black" OR "shop black" OR "mogul millenial" OR "pushblack" OR "black tech pipeline" OR "blacktechpipeline" OR "ObsidianTech" OR "black tech conference" OR "black tech start-up" OR "black tech entrepreneur" OR "black-owned business"&' +
-  daysAgo +
-  'sortBy=publishedAt&' +
-  'language=en&' +
-  'apiKey=b5ba104a8a6740fd90b8c8a32126245a';
+export const articlesQuery = `${param.query}&${param.token}&${param.lang}&${param.country}&${param.sorted}`
