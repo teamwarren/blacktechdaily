@@ -22,7 +22,7 @@ const App = () => {
           <h1 className="header-title"> Black Tech Daily </h1>
           <Button toggleMode={toggleMode} modeText={modeText} />
         </div>
-          <h2 className="header-subtitle"> Your Daily Source for News on Blacks in IT </h2>
+          <h2 className="header-subtitle"> Your Daily Source for News on Blacks in Tech and Business </h2>
         <ArticlesFeed mode={mode}/>
       </div>
       <Footer mode={mode}/>
