@@ -13,23 +13,26 @@ const ArticleFeed = props => {
     })
   }, []);
 
+  const uniqueArticles = Array.from(new Set(articles.map(article => article.title)))
+    .map(title => {
+      return articles.find(article => article.title === title)
+    })
+
   return articles.length > 0 ? (
-    <ul>
-      {articles
-        .map((article, index) => {
-          return (
-            <li className="article-li" key={index}>
-              <span className={`article-header-${props.mode}`}>
-                Published {article.author ? `by ${article.author}` : null} {moment(article.publishedAt).fromNow()}
-              </span>
-              <br />
-              <a className={`article-title-${props.mode}`} href={article.url} target="_blank" rel="noopener noreferrer">
-                {article.title}
-              </a>
-            </li>
-          )
-        })}
-    </ul>
+    uniqueArticles
+      .map((article, index) => {
+        return (
+          <p className="article" key={index}>
+            <span className={`article-header-${props.mode}`}>
+              Published {article.author ? `by ${article.author}` : null} {moment(article.publishedAt).fromNow()}
+            </span>
+            <br />
+            <a className={`article-title-${props.mode}`} href={article.url} target="_blank" rel="noopener noreferrer">
+              {article.title}
+            </a>
+          </p>
+        )
+      })
   ) : 'Loading...'
 }
 
