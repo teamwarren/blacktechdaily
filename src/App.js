@@ -6,7 +6,11 @@ import './App.css';
 import ArticlesFeed from './components/articles-feed/articles-feed'
 
 const App = () => {
-  const [mode, setMode] = useState(localStorage.getItem('cachedMode') || '');
+  const [mode, setMode] = useState(localStorage.getItem('cachedMode') ?? 'light');
+  if (!(mode === 'light' || mode === 'dark')) {
+    setMode('light');
+  }
+
   const modeText = mode === 'light' ? 'dark' : 'light';
 
   useEffect(() => {
