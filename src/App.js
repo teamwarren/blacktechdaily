@@ -26,8 +26,8 @@ const App = () => {
         <div className='header-top-row'>
           <h1 className='header-title'> Black Tech Daily </h1>
           <Button
-            toggleMode={toggleMode}
             modeText={modeText}
+            toggleMode={toggleMode}
             aria-label='dark mode'
           />
         </div>
