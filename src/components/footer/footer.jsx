@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './footer.css';
 
+const date = new Date();
+const year = date.getFullYear();
+
 /**
  * Renders footer
  * @param {string} mode - light or dark for color theme
@@ -9,7 +12,7 @@ import './footer.css';
  */
 const Footer = ({ mode }) => {
   return (
-    <div className={`footer footer-${mode}`}>&copy; 2022 | TeamWarren</div>
+    <div className={`footer footer-${mode}`}>&copy; {year} | TeamWarren</div>
   );
 };
 
