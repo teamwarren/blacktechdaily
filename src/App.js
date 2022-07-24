@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Footer from './components/footer/footer';
-import Button from './components/button/button';
+import ModeSwitch from './components/mode-switch/mode-switch';
 import './App.css';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -28,7 +28,7 @@ const App = () => {
         <div className={`content ${mode}-content`}>
           <div className='header-top-row'>
             <h1 className='header-title'> Black Tech Daily </h1>
-            <Button toggleMode={toggleMode} modeText={modeText} />
+            <ModeSwitch toggleMode={toggleMode} modeText={modeText} />
           </div>
           <h2 className='header-subtitle'>
             {' '}
