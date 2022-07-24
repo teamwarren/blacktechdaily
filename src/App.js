@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Footer from './components/footer/footer';
 import Button from './components/button/button';
 import './App.css';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
 
 import ArticlesFeed from './components/articles-feed/articles-feed';
 

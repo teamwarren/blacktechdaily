@@ -11,11 +11,11 @@ Black Tech Daily is a curation of articles focused on blacks in technology and b
 <code>
 $ git clone https://github.com/teamwarren/blacktechdaily.git
 
-$ yarn or npm install
+$ Install: yarn or npm install
 
-$ yarn dev or npm dev to run app
+$ Run app: yarn dev or npm run dev
 
-$ yarn start or npm start to hit mock server
+$ Run mock server: In new terminal tab, yarn start or npm start
 </code>
 
 # Development
@@ -30,7 +30,7 @@ $ yarn start or npm start to hit mock server
 ### Testing
 
 - Jest
-- React Testing Library (in progress)
+- React Testing Library
 
 # Sending Feedback
 
