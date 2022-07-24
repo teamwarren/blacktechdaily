@@ -4,7 +4,6 @@ import moment from 'moment';
 import ErrorModal from '../error-modal/error-modal';
 import { articlesQuery } from './articles.config';
 import './articles-feed.css';
-import { isDev } from '../../globals';
 
 const ArticleFeed = props => {
   const [articles, setArticles] = useState([]);
@@ -15,7 +14,11 @@ const ArticleFeed = props => {
       axios
         .get(articlesQuery)
         .then(res => {
-          setArticles(isDev ? res.data : res.data.articles);
+          if (res.data.articles.length > 0) {
+            setArticles(res.data.articles);
+          } else {
+            setIsError(true);
+          }
         })
         .catch(err => {
           console.error(err);
@@ -36,7 +39,7 @@ const ArticleFeed = props => {
     return articles.find(article => article.title === title);
   });
 
-  const handleClose = () => {
+  const onClose = () => {
     setIsError(false);
     getArticles();
   };
@@ -65,7 +68,7 @@ const ArticleFeed = props => {
             );
           })
         : 'Loading...'}
-      {isError && <ErrorModal onClose={handleClose} />}
+      {isError && <ErrorModal onClose={onClose} />}
     </>
   );
 };
