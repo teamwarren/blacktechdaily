@@ -3,24 +3,21 @@
   "version": "0.4.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.0",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.9.1",
     "axios": "^0.27.2",
-    "jsdoc": "^3.6.10",
-    "moment": "^2.29.3",
-    "prop-types": "^15.8.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:watch": "react-scripts test --watch",
     "eject": "react-scripts eject",
-    "doc": "jsdoc -c jsdoc.json"
+    "start": "json-server --watch ./articles.json --port 8000"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,6 +35,10 @@
     ]
   },
   "devDependencies": {
-    "web-vitals": "^2.1.4"
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.3.0",
+    "json-server": "^0.17.0",
+    "prop-types": "^15.8.1"
   }
 }

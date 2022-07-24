@@ -8,11 +8,15 @@ Black Tech Daily is a curation of articles focused on blacks in technology and b
 
 ## Access Locally
 
-`$ git clone https://github.com/teamwarren/blacktechdaily.git`
+<code>
+$ git clone https://github.com/teamwarren/blacktechdaily.git
 
-`$ yarn or npm install`
+$ Install: yarn or npm install
 
-`$ yarn start or npm start`
+$ Run app: yarn dev or npm run dev
+
+$ Run mock server: In new terminal tab, yarn start or npm start
+</code>
 
 # Development
 
