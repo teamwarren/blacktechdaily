@@ -7,7 +7,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import ArticlesFeed from './components/articles-feed/articles-feed';
 
 const App = () => {
-  const [mode, setMode] = useState(localStorage.getItem('cachedMode') || '');
+  const [mode, setMode] = useState(localStorage.getItem('cachedMode'));
+  if (!(mode === 'light' || mode === 'dark')) {
+    setMode('light');
+  }
+
   const modeText = mode === 'light' ? 'dark' : 'light';
 
   useEffect(() => {

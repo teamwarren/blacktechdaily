@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Footer from './footer';
 
-test('renders the app', () => {
+test('renders the footer', () => {
   const { getByText } = render(<Footer />);
   expect(getByText(/© 2020 | TeamWarren/i)).toBeInTheDocument();
 });
