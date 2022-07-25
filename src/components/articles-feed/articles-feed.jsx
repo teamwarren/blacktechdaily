@@ -55,7 +55,6 @@ const ArticleFeed = props => {
     <List
       sx={{
         width: '100%',
-        // maxWidth: 360,
         bgcolor: 'background.paper',
       }}
     >
@@ -69,7 +68,10 @@ const ArticleFeed = props => {
             <div key={index}>
               <ListItem>
                 <ListItemAvatar>
-                  <Avatar alt='Article thumbnail' src={article.image}></Avatar>
+                  <Avatar
+                    alt={`${article.title} `}
+                    src={article.image}
+                  ></Avatar>
                 </ListItemAvatar>
                 <Link
                   underline='none'
