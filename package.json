@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "json-server --watch ./articles.json --port 8000"
+    "start": "json-server --watch ./articles-mock.json --port 8000"
   },
   "eslintConfig": {
     "extends": "react-app"

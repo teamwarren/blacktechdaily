@@ -56,23 +56,22 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 /**
  * Render a switch to toggle modes
  *
- * @param {string} modeText
  * @param {Function} toggleMode
  * @returns {object}
  */
-export default function ModeSwitch({ toggleMode }) {
+export default function ModeSwitch({ colorMode }) {
   return (
     <FormGroup>
       <FormControlLabel
         control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
         label=''
-        onChange={toggleMode}
+        onChange={colorMode.toggleColorMode}
+        color='inherit'
       />
     </FormGroup>
   );
 }
 
 ModeSwitch.propTypes = {
-  modeText: PropTypes.string,
   toggleMode: PropTypes.func,
 };
