@@ -72,6 +72,7 @@ const ArticleFeed = props => {
                   <Avatar alt='Article thumbnail' src={article.image}></Avatar>
                 </ListItemAvatar>
                 <Link
+                  underline='none'
                   href={article.url}
                   target='_blank'
                   rel='noopener noreferrer'

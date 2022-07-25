@@ -26,11 +26,10 @@ export default function Footer() {
       <Box
         sx={{
           bgcolor: 'background.paper',
-          p: 6,
+          p: 3,
           display: 'flex',
           flexGrow: 1,
-          flexDirection: 'column',
-          justifyContent: 'end',
+          justifyContent: 'center',
         }}
         component='footer'
       >
