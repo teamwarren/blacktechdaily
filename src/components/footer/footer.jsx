@@ -1,23 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './footer.css';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
-const date = new Date();
-const year = date.getFullYear();
-
-/**
- * Renders footer
- * @param {string} mode - light or dark for color theme
- * @returns {object}
- */
-const Footer = ({ mode }) => {
+function Copyright() {
   return (
-    <div className={`footer footer-${mode}`}>&copy; {year} | TeamWarren</div>
+    <Typography variant='body2' color='text.secondary'>
+      {'Copyright © '}
+      <Link color='inherit' href='https://github.com/teamwarren/blacktechdaily'>
+        Black Tech Daily
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
   );
-};
+}
 
-Footer.propTypes = {
-  mode: PropTypes.string,
-};
-
-export default Footer;
+export default function Footer() {
+  return (
+    <Box
+      sx={{
+        bgcolor: 'background.paper',
+        p: 3,
+        display: 'flex',
+        flexGrow: 1,
+        justifyContent: 'center',
+      }}
+      component='footer'
+    >
+      <Copyright />
+    </Box>
+  );
+}

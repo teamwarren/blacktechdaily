@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.1",
     "axios": "^0.27.2",
     "moment": "^2.29.4",
@@ -17,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "json-server --watch ./articles.json --port 8000"
+    "start": "json-server --watch ./articles-mock.json --port 8000"
   },
   "eslintConfig": {
     "extends": "react-app"
