@@ -6,7 +6,13 @@ function Copyright() {
   return (
     <Typography variant='body2' color='text.secondary'>
       {'Copyright © '}
-      <Link color='inherit' href='https://github.com/teamwarren/blacktechdaily'>
+      <Link
+        color='inherit'
+        data-cy='github-link'
+        href='https://github.com/teamwarren/blacktechdaily'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         Black Tech Daily
       </Link>{' '}
       {new Date().getFullYear()}

@@ -66,7 +66,7 @@ const ArticleFeed = props => {
           } ${moment(article.publishedAt).fromNow()}`;
           return (
             <div key={index}>
-              <ListItem>
+              <ListItem data-cy={`article-${index}`}>
                 <ListItemAvatar>
                   <Avatar
                     alt={`${article.title} `}
@@ -74,6 +74,7 @@ const ArticleFeed = props => {
                   ></Avatar>
                 </ListItemAvatar>
                 <Link
+                  data-cy='article-link'
                   underline='none'
                   href={article.url}
                   target='_blank'

@@ -63,6 +63,7 @@ export default function ModeSwitch({ colorMode }) {
   return (
     <FormGroup>
       <FormControlLabel
+        data-cy='mode-switch'
         control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
         label=''
         onChange={colorMode.toggleColorMode}

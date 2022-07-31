@@ -10,7 +10,12 @@ export default function Navbar({ colorMode }) {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>
         <Toolbar>
-          <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+          <Typography
+            variant='h6'
+            component='div'
+            sx={{ flexGrow: 1 }}
+            data-cy='navbar-title'
+          >
             Black Tech Daily
           </Typography>
           <ModeSwitch colorMode={colorMode} />
