@@ -2,9 +2,9 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import ArticlesFeed from './components/articles-feed/articles-feed';
-import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
+import TabsPanel from './components/tabs-panel/tabs-panel';
+import Navbar from './components/navbar/navbar';
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -19,7 +19,7 @@ function MyApp() {
       }}
     >
       <Navbar colorMode={colorMode} />
-      <ArticlesFeed />
+      <TabsPanel />
       <Footer />
     </Box>
   );

@@ -30,6 +30,10 @@ export default function Footer() {
         display: 'flex',
         flexGrow: 1,
         justifyContent: 'center',
+        overflow: 'hidden',
+        position: 'fixed',
+        bottom: 0,
+        width: '100%',
       }}
       component='footer'
     >

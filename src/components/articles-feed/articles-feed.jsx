@@ -58,38 +58,49 @@ const ArticleFeed = props => {
         bgcolor: 'background.paper',
       }}
     >
-      {articles.length > 0 ? (
-        uniqueArticles.map((article, index) => {
-          const primary = article.title;
-          const secondary = `Published ${
-            article.source.name ? `by ${article.source.name}` : null
-          } ${moment(article.publishedAt).fromNow()}`;
-          return (
-            <div key={index}>
-              <ListItem data-cy={`article-${index}`}>
-                <ListItemAvatar>
-                  <Avatar
-                    alt={`${article.title} `}
-                    src={article.image}
-                  ></Avatar>
-                </ListItemAvatar>
-                <Link
-                  data-cy='article-link'
-                  underline='none'
-                  href={article.url}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <ListItemText primary={primary} secondary={secondary} />
-                </Link>
-              </ListItem>
-              <Divider />
-            </div>
-          );
-        })
-      ) : (
-        <Spinner />
-      )}
+      {articles.length > 0
+        ? uniqueArticles.map((article, index) => {
+            return (
+              <div key={index}>
+                <ListItem>
+                  <ListItemAvatar>
+                    <Avatar
+                      alt={`${article.title} `}
+                      src={article.image}
+                    ></Avatar>
+                  </ListItemAvatar>
+                  <Link
+                    data-cy='article-link'
+                    underline='none'
+                    href={article?.source?.url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <ListItemText
+                      primary={article?.source?.name}
+                      secondary={`${moment(article.publishedAt).fromNow()}`}
+                    />
+                  </Link>
+                </ListItem>
+                <ListItem data-cy={`article-${index}`}>
+                  <Link
+                    data-cy='article-link'
+                    underline='none'
+                    href={article.url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <ListItemText
+                      primary={article?.title}
+                      secondary={article?.description}
+                    />
+                  </Link>
+                </ListItem>
+                <Divider />
+              </div>
+            );
+          })
+        : !isError && <Spinner />}
       {isError && <ErrorModal onClose={onClose} />}
     </List>
   );
