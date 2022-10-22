@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 describe('Application redirects - articles', () => {
   beforeEach(() => {
     cy.visit('/');

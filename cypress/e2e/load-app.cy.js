@@ -1,7 +1,3 @@
-/// <reference types="Cypress" />
-
-// get vs contains with text content https://docs.cypress.io/guides/references/best-practices#Text-Content
-
 describe('Application rendering', () => {
   beforeEach(() => {
     cy.visit('/');
@@ -15,12 +11,24 @@ describe('Application rendering', () => {
   });
   it('should render application components', () => {
     cy.visit('/').title().should('equal', 'Black Tech Daily');
-    cy.get('[data-cy="navbar-title"]');
-  });
-  it('should switch to dark mode', () => {
-    cy.get('[data-cy="mode-switch"]').click();
-  });
-  it.skip('should reload the appliaction', () => {
-    cy.reload();
+    cy.findByRole('button', {
+      name: 'open drawer',
+    });
+    cy.findByRole('textbox', {
+      name: 'search',
+    });
+    cy.findByRole('checkbox'); // mui toggle button
+    cy.findByRole('tablist', {
+      name: 'navigation tabs',
+    });
+    cy.findByRole('tab', {
+      name: 'Community',
+    });
+    cy.findByRole('tab', {
+      name: 'Home',
+    });
+    cy.findByRole('tab', {
+      name: 'Events',
+    });
   });
 });
