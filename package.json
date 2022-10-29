@@ -20,6 +20,8 @@
     "dev": "react-scripts start",
     "doc": "jsdoc -c jsdoc.json",
     "eject": "react-scripts eject",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
     "test": "react-scripts test",
     "start": "json-server --watch ./articles-mock.json --port 8000"
   },
