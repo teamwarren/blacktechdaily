@@ -18,7 +18,10 @@
     "cy:run": "cypress run",
     "build": "react-scripts build",
     "dev": "react-scripts start",
+    "doc": "jsdoc -c jsdoc.json",
     "eject": "react-scripts eject",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
     "test": "react-scripts test",
     "start": "json-server --watch ./articles-mock.json --port 8000"
   },
@@ -46,7 +49,9 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.3.0",
     "cypress": "^10.3.1",
+    "docdash": "^1.2.0",
     "eslint-plugin-cypress": "^2.12.1",
+    "jsdoc": "^3.6.11",
     "json-server": "^0.17.0",
     "prop-types": "^15.8.1"
   }
