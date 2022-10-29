@@ -12,7 +12,11 @@ import Spinner from '../spinner/spinner';
 import ErrorModal from '../error-modal/error-modal';
 import { articlesQuery } from './articles.config';
 
-const ArticleFeed = props => {
+/**
+ * Displays a list of news articles.
+ * @returns object
+ */
+const ArticlesFeed = () => {
   const [articles, setArticles] = useState([]);
   const [isError, setIsError] = useState(false);
 
@@ -106,4 +110,4 @@ const ArticleFeed = props => {
   );
 };
 
-export default ArticleFeed;
+export default ArticlesFeed;

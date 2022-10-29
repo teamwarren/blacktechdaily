@@ -9,13 +9,23 @@ Black Tech Daily is a curation of articles focused on blacks in technology and b
 ## Access Locally
 
 <code>
-$ git clone https://github.com/teamwarren/blacktechdaily.git
+In terminal, run git clone https://github.com/teamwarren/blacktechdaily.git
 
-$ Install: yarn or npm install
+Install: `npm install`
 
-$ Run app: yarn dev or npm run dev
+Run app: `npm run dev`
 
-$ Run mock server: In new terminal tab, yarn start or npm start
+Run mock server: In new terminal tab, `npm start`
+</code>
+
+## Additional scripts
+
+<code>
+Run unit tests: `npm run test`
+
+Run end-to-end tests: `npm run cy:open` (or `npm run cy:run` to run headless in terminal`)
+
+View application documentation: `npm run doc` and open `docs/index.html` in a browser window.
 </code>
 
 # Development
@@ -31,6 +41,7 @@ $ Run mock server: In new terminal tab, yarn start or npm start
 
 - Jest
 - React Testing Library
+- Cypress
 
 # Sending Feedback
 
