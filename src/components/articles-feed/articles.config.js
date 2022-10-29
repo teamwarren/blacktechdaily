@@ -4,7 +4,7 @@ import { isDev } from '../../globals';
  * Keywords for retrieve articles from gnews api
  * @type {string}
  */
-const query = `"black engineer" OR "black founders" OR "buy black" OR "black ceo" OR "black-owned" OR "hbcu" OR "spend black" OR "shop black" OR "black startup" OR "black entrepreneur" OR "black excellence"`;
+const query = `"black engineer" OR "black founders" OR "support black business" OR "black ceo" OR "black-owned" OR "hbcu" OR "spend black" OR "shop black" OR "black startup" OR "black entrepreneur"`;
 // console.log('query.length:', query.length);
 
 /**
