@@ -52,7 +52,7 @@
     "docdash": "^1.2.0",
     "eslint-plugin-cypress": "^2.12.1",
     "jsdoc": "^3.6.11",
-    "json-server": "^0.17.0",
+    "json-server": "^0.17.1",
     "prop-types": "^15.8.1"
   }
 }
